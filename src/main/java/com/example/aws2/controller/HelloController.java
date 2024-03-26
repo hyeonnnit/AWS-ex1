@@ -12,13 +12,17 @@ public class HelloController {
     
     @GetMapping("/")
     public String home(){
+        log.trace("get /");
+        log.debug("get /");
         log.info("get /");
+        log.warn("get /");
+        log.error("get /");
         return "home";
     }
 
     @GetMapping("/aws/2")
     public String aws1(){
-        log.info("get /aws/2");
+        log.debug("get /aws/2");
         return "<h1>aws2</h1>";
     }
 }
